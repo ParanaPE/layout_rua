@@ -9,8 +9,8 @@
       --bg:#0f1724;
       --panel:#0b1220;
       --card:#ffffff;
-      --p2-bg:#fff3e0;
-      --p2-border:#ff8a3d;
+      --p2-bg:#d0f0c0; /* verde claro */
+      --p2-border:#4caf50; /* borda verde */
       --muted:#94a3b8;
     }
     body{
@@ -20,7 +20,16 @@
       background:linear-gradient(180deg,#07101a,#071726);
       color:#e6eef6;
     }
-    h1{font-size:18px;margin:0 0 12px 0}
+    h1{
+      font-size:18px;
+      margin:0 0 12px 0;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    h1 img{
+      height:24px; /* tamanho do logo */
+    }
     .wrap{max-width:1400px;margin:0 auto}
     .meta{color:var(--muted);font-size:13px;margin-bottom:12px}
     .grid{
@@ -37,10 +46,17 @@
       box-shadow: 0 2px 6px rgba(2,6,23,0.5);
       border:1px solid rgba(0,0,0,0.06);
       line-height:1.15;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      min-height:80px; /* mesmo tamanho para todos */
     }
     .card .r{font-weight:700;margin-bottom:6px;font-size:13px;color:#0b1220}
     .card .d{font-size:11px;color:#0b1220}
-    .card.p2{background:var(--p2-bg);border:1px solid var(--p2-border)}
+    .card.p2{
+      background:var(--p2-bg);
+      border:1px solid var(--p2-border);
+    }
     .small{font-size:11px;color:var(--muted)}
     @media (max-width:1100px){
       .grid{grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));}
@@ -52,10 +68,14 @@
 </head>
 <body>
   <div class="wrap">
-    <h1>Mapa Visual das Ruas — 1 a 186</h1>
+    <h1>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Shopee_logo.png" alt="Shopee">
+      Mapa Visual das Ruas — 1 a 186
+    </h1>
     <div class="meta">Ruas com <strong>Prioridade 2</strong> têm cor diferenciada.</div>
 
     <div class="grid">
+
       <!-- Rows 1–186 (generated) -->
       <div class="card"><div class="r">Rua 1</div><div class="d"><strong>Destino 1:</strong> SoC_MG_Betim<br><strong>Destino 2:</strong> <span class="small">—</span><br><strong>Prioridade:</strong> 1</div></div>
       <div class="card"><div class="r">Rua 2</div><div class="d"><strong>Destino 1:</strong> SoC_MG_Betim<br><strong>Destino 2:</strong> <span class="small">—</span><br><strong>Prioridade:</strong> 1</div></div>
@@ -254,3 +274,4 @@
   </div>
 </body>
 </html>
+
