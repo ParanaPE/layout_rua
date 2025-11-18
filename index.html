@@ -54,8 +54,13 @@
   justify-content: space-between;
   aspect-ratio: 2 / 1; /* largura:altura = 2:1 */
   overflow: hidden;
-  min-width: 213px;  /* antes era 250px, diminuí ~1cm */
-  min-height: 106px; /* metade da largura, mantendo proporção */
+  min-width: 213px;  /* largura reduzida */
+  min-height: 106px; /* altura proporcional */
+}
+
+.card.p2 {
+  background: #d4edda; /* verde claro */
+  border: 1px solid #28a745; /* borda verde */
 }
 
 .grid {
@@ -70,6 +75,7 @@
 @media (max-width:700px){
   .grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
 }
+
 
 
   </style>
@@ -282,6 +288,7 @@
   </div>
 </body>
 </html>
+
 
 
 
