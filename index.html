@@ -52,25 +52,25 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  aspect-ratio: 2 / 1; /* largura = 2x altura */
-  min-height: 100px; /* aumenta a altura mínima */
+  aspect-ratio: 2 / 1; /* largura:altura = 2:1 */
   overflow: hidden;
+  min-width: 213px;  /* antes era 250px, diminuí ~1cm */
+  min-height: 106px; /* metade da largura, mantendo proporção */
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(213px, 1fr));
+  gap: 12px;
+}
 
-    .card .r{font-weight:700;margin-bottom:6px;font-size:13px;color:#0b1220}
-    .card .d{font-size:11px;color:#0b1220}
-    .card.p2{
-      background:var(--p2-bg);
-      border:1px solid var(--p2-border);
-    }
-    .small{font-size:11px;color:var(--muted)}
 @media (max-width:1100px){
-  .grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
-}
-@media (max-width:700px){
   .grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
 }
+@media (max-width:700px){
+  .grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+}
+
 
   </style>
 </head>
@@ -282,6 +282,7 @@
   </div>
 </body>
 </html>
+
 
 
 
